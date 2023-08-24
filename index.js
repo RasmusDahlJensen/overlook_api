@@ -1,18 +1,18 @@
-import express from "express";
-import dotenv from "dotenv";
-import { fileURLToPath } from "url";
-import path from "path";
-import InstallRouter from "./Routes/install.router.js";
-import CoreRouter from "./Routes/core.router.js";
-import AppRouter from "./Routes/app.router.js";
-import cors from "cors";
+import express from "express"
+import dotenv from 'dotenv'
+import { fileURLToPath } from 'url';
+import path from 'path';
 
 dotenv.config();
 
 const port = process.env.PORT || 3000;
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
+const port = process.env.PORT || 3000
+
+const app = express()
+
+app.use(express.urlencoded({ extended: true }))
 const currentUrl = import.meta.url;
 const currentPath = fileURLToPath(currentUrl);
 const currentDir = path.dirname(currentPath);
